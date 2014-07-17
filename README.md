@@ -3,7 +3,7 @@ sqs2poscar
 
 A c++ code to convert bestsqs.out from mcsqs (ATAT) to POSCAR for VASP.
 
-`sqs2poscar bestsqs.out`
+Usage: `sqs2poscar bestsqs.out`
   
 The output file is bestsqs.out-POSCAR.
 
