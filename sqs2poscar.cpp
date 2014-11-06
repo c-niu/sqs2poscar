@@ -22,7 +22,7 @@ using namespace std;
 /// read_bestsqs:
 ///     return true if successful; false otherwise.
 bool read_bestsqs (char *file, double dArrVec1[3][3], double dArrVec2[3][3],
-                   double dArrAtom[100][3], string strArrAtom[100], int& nAtom,
+                   double dArrAtom[500][3], string strArrAtom[500], int& nAtom,
                    int& nElem, int nArrElem[10], string strArrElem[10]) {
     istringstream iss;
     ifstream is;
@@ -130,15 +130,15 @@ int main (int argc, char* argv[]) {
     char *file;                 // file name given by user
     double dArrVec1[3][3];      // basis vectors in bestsqs
     double dArrVec2[3][3];      // lattice vectors in bestsqs
-    double dArrAtom[100][3];    // atomic coordinates in bestsqs
-    string strArrAtom[100];     // atomic species in bestsqs
+    double dArrAtom[500][3];    // atomic coordinates in bestsqs
+    string strArrAtom[500];     // atomic species in bestsqs
     int nAtom;                  // # of atoms
     int nElem;                  // # of elements
     int nArrElem[10];           // # of atoms of each element
     string strArrElem[10];      // name of elements
     double dArrLatVec[3][3];    // lattice vectors in POSCAR
     double dArrLatVecInv[3][3]; // inverse matrix of vectors
-    double dArrAtom2[100][3];   // atomic coordinates in POSCAR
+    double dArrAtom2[500][3];   // atomic coordinates in POSCAR
     string strTemp;
     int count;
     double x, y, z;
