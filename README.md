@@ -12,3 +12,16 @@ Output file: `bestsqs.out-POSCAR`
 Post-processing: change `xxx` in the second line of output POSCAR file to your lattice constant.
 
 Note: `bestsqs.out` can be any file at present working directory.
+
+### Update
+After the code was released, c++ compiler on Linux seems to have added some changes to the default libraries. If you find the following errors:
+
+  sqs2poscar.cpp:218: error: ‘exit’ was not declared in this scope
+  sqs2poscar.cpp:222: error: ‘strcat’ was not declared in this scope
+  sqs2poscar.cpp:225: error: ‘exit’ was not declared in this scope
+  sqs2poscar.cpp:251: error: ‘exit’ was not declared in this scope
+  
+you can solve these errors by adding these two lines into the head of the `sqs2poscar.cpp` file:
+
+  #include <cstring>
+  #include <stdlib.h>
